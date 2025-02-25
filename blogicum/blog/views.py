@@ -49,7 +49,7 @@ def index(request):
     return render(request, 'blog/index.html', {'posts': posts})
 
 
-def post_detal(request, id):
+def post_detail(request, id):
     return render(request, 'blog/detail.html', {'post': posts[id]})
 
 

@@ -1,24 +1,19 @@
 {% extends "base.html" %}
-{% block title %}
-{{ posts.location }} {{ posts.date }}
-{% endblock %}
 {% block content %}
-  <div class="container py-5">
-    <article>
-      <ul>
-        <li>
-          Место: {{ posts.location }}           
-        </li>
-        <li>
-          Дата: {{ posts.date }}
-        </li>
-        <li>
-          Категория: <a href="/category/not-my-day">not-my-day</a>
-        </li>
-      </ul>         
-      <p>
-        {{ post.text|linebreaksbr }}
-      </p>          
-    </article>                
-  </div>
+  <article>
+    <ul>
+      <li>
+        Место: {{ post.location }}           
+      </li>
+      <li>
+        Дата: {{ post.date }}
+      </li>
+      <li>
+        Категория: <a href="{% url 'category_posts' %}"> not-my-day</a>
+      </li>
+    </ul>         
+    <p>
+      {{ post.text|linebreaksbr }}
+    </p>          
+  </article>
 {% endblock %}

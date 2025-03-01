@@ -12,8 +12,8 @@
         Дата: {{ post.date }}
       </li>
       <li>
-        Категория: <a href="{% url 'blog:category_posts' post.category 
-                     %}"> {{ post.category }}</a>
+        Категория: <a href="{% url 'blog:category_posts' category.category 
+                     %}"> {{ category.category }}</a>
       </li>
     </ul>         
     <p>

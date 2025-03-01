@@ -49,7 +49,8 @@ posts_dict = {post['id']: post for post in posts}
 
 
 def index(request):
-    return render(request, 'blog/index.html', {'posts': posts})
+    sorted_posts = sorted(posts, key=lambda x: x['id'], reverse=True)
+    return render(request, 'blog/index.html', {'posts': sorted_posts})
 
 
 def post_detail(request, id):
